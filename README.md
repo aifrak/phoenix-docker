@@ -1,2 +1,2 @@
 # phoenix-docker
-Installation of a dockerized testinfra (Debian).
+Installation of a dockerized Phoenix / Elixir (Debian).
