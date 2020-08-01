@@ -1,11 +1,16 @@
 # Phoenix in Docker
 Installation of a dockerized Phoenix / Elixir (Debian).
 
-# Docker hub
+### Docker
+```
+docker pull aifrak/phoenix
+```
+
+### Docker hub
 https://hub.docker.com/r/aifrak/phoenix
 
-# Phoenix
+### Phoenix
 https://www.phoenixframework.org/
 
-# Erlang
+### Erlang
 https://elixir-lang.org/
