@@ -59,18 +59,19 @@ The default user used by the container is `app-user`. Its user folder is also cr
 docker pull aifrak/phoenix
 ```
 
-## Docker hub
+## Quick references
 
-<https://hub.docker.com/r/aifrak/phoenix>
+__Docker hub__: https://hub.docker.com/r/aifrak/phoenix \
+__Github__: https://github.com/aifrak/phoenix-docker
 
 ## Inspirations
 
-[Elixir image by bitwalker](https://github.com/bitwalker/alpine-elixir)
+[Elixir image by bitwalker](https://github.com/bitwalker/alpine-elixir) \
 [Phoenix guide](https://hexdocs.pm/phoenix)
 
 ## Technologies
 
-[Phoenix](https://www.phoenixframework.org/)
-[Elixir](https://elixir-lang.org/)
-[Erlang](https://www.erlang.org/)
+[Phoenix](https://www.phoenixframework.org/) \
+[Elixir](https://elixir-lang.org/) \
+[Erlang](https://www.erlang.org/) \
 [NodeJS](https://nodejs.org)
