@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  sut:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+      target: test-build
+    depends_on:
+      - base-image
+  # base image to be tested by sut
+  base-image:
+    image: aifrak/base-image:sut
+    build: .
