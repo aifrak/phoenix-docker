@@ -1,5 +1,5 @@
 FROM node:12.18.3-buster-slim as node
-FROM hexpm/elixir:1.10.4-erlang-23.0.3-debian-buster-20200607 as base
+FROM hexpm/elixir:1.10.4-erlang-23.0.3-debian-buster-20200607 as build-phoenix
 
 # install packages as suggested from https://hexdocs.pm/phoenix/installation.html
 RUN set -ex \
@@ -36,14 +36,13 @@ RUN \
 
 USER $APP_USER
 
-# COPY --from=node /usr/local/bin/ /usr/local/bin/
-
 # install hex, rebar and phoenix
 ENV PHOENIX_VERSION=1.5.4
 RUN mix local.hex --force \
   && mix local.rebar --force \
   && mix archive.install --force hex phx_new $PHOENIX_VERSION
 
+# copy node binaries
 COPY --from=node /usr/local/bin /usr/local/bin/
 COPY --from=node /usr/local/include /usr/local/include/
 COPY --from=node /usr/local/lib /usr/local/lib/
