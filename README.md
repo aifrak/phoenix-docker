@@ -26,7 +26,7 @@ docker run --rm -it \
   aifrak/phoenix
 ```
 
-This example runs the image with the current host directory inside the container and with port 4000 exposed.
+This example runs the image with the current host directory inside the container and with port `4000` exposed.
 
 ```
 docker run --rm -it \
@@ -61,17 +61,17 @@ docker pull aifrak/phoenix
 
 ## Quick references
 
-__Docker hub__: https://hub.docker.com/r/aifrak/phoenix \
-__Github__: https://github.com/aifrak/phoenix-docker
+- __Docker hub__: https://hub.docker.com/r/aifrak/phoenix
+- __Github__: https://github.com/aifrak/phoenix-docker
 
 ## Inspirations
 
-[Elixir image by bitwalker](https://github.com/bitwalker/alpine-elixir) \
-[Phoenix guide](https://hexdocs.pm/phoenix)
+- [Elixir image by bitwalker](https://github.com/bitwalker/alpine-elixir)
+- [Phoenix guide](https://hexdocs.pm/phoenix)
 
 ## Technologies
 
-[Phoenix](https://www.phoenixframework.org/) \
-[Elixir](https://elixir-lang.org/) \
-[Erlang](https://www.erlang.org/) \
-[NodeJS](https://nodejs.org)
+- [Phoenix](https://www.phoenixframework.org/)
+- [Elixir](https://elixir-lang.org/)
+- [Erlang](https://www.erlang.org/)
+- [NodeJS](https://nodejs.org)
