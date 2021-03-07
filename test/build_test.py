@@ -3,6 +3,12 @@ import platform
 import pytest
 import testinfra
 
+# versions used in Dockerfile
+NODE_VERSION = '14.16.0'
+NPX_VERSION = '6.14.11'
+ELIXIR_VERSION = '1.11.3'
+ERLANG_VERSION = '23.2.7'
+
 HOME_PATH = os.environ['HOME']
 ROOT = 'root'
 USER_NAME = 'app-user'
@@ -26,9 +32,9 @@ def test_apt_packages(host, name, version):
 
 
 @pytest.mark.parametrize('name,version', [
-    ('node', '12.18.3'),
-    ('elixir', '1.10.4'),
-    ('npx', '6.14.6'),
+    ('node', NODE_VERSION),
+    ('elixir', ELIXIR_VERSION),
+    ('npx', NPX_VERSION),
 ])
 def test_custom_packages(host, name, version):
     version_cmd = host.run(name + ' --version')
@@ -43,7 +49,7 @@ def test_erlang_package(host):
         "erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), \"releases\", erlang:system_info(otp_release), \"OTP_VERSION\"])), io:fwrite(Version), halt().' -noshell")
 
     assert version_cmd.succeeded
-    assert version_cmd.stdout.startswith('23.0.3')
+    assert version_cmd.stdout.startswith(ERLANG_VERSION)
 
 
 def test_current_user(host):
